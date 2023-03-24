@@ -1,5 +1,6 @@
 .container {
   display: flex;
+  align-items: center;
 }
 
 .item {
@@ -58,4 +59,20 @@
 .icon {
   width: 30px;
   height: auto;
+}
+
+.grid {
+  width: 200px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .6rem;
+}
+
+.grid div {
+  cursor: pointer;
+  padding: .2rem .4rem;
+}
+
+.grid div:hover {
+  opacity: .8;
 }

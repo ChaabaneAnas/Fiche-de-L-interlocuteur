@@ -34,6 +34,18 @@ interface contactAssociés {
   contact: string;
 }
 
+interface Gisement {
+  bovin: number;
+  bettrave: number;
+  Autres: null | number;
+  graph: {
+    bioGaz: number;
+    Obligations: number;
+    Electrcité: number;
+    Actions: number;
+  };
+}
+
 export interface person {
   Nom: string;
   Prenom: string;
@@ -46,4 +58,5 @@ export interface person {
   exploitation: exploitation;
   CUMA: CUMA;
   contactAssociés: contactAssociés;
+  Gisement: Gisement;
 }

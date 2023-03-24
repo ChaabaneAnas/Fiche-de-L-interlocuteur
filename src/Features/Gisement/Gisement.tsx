@@ -1,10 +1,14 @@
 import styles from './gisement.module.css';
-import { CircularProgress } from '@mui/material';
 import { SiHappycow } from 'react-icons/si';
 import { GiGrain } from 'react-icons/gi';
 import { BiRecycle } from 'react-icons/bi';
+import { data } from '../../data';
+import Progress from '../../components/Progress/progress';
+import { useState } from 'react';
 
 function Gisement() {
+  const { Gisement } = data[0];
+  const [type, setType] = useState<string | null>('Biogaz');
   return (
     <div className={styles.container}>
       <div className={`${styles.bovin} ${styles.item}`}>
@@ -13,7 +17,7 @@ function Gisement() {
         </div>
         <div className={styles.content}>
           <div>Bovin</div>
-          <div>300</div>
+          <div>{Gisement.bovin ? Gisement.bovin : '--'}</div>
         </div>
       </div>
       <div className={`${styles.bettrave} ${styles.item}`}>
@@ -22,7 +26,7 @@ function Gisement() {
         </div>
         <div className={styles.content}>
           <div>Bettrave</div>
-          <div>100ha</div>
+          <div>{Gisement.bettrave ? Gisement.bettrave : '--'}ha</div>
         </div>
       </div>
       <div className={`${styles.autres} ${styles.item}`}>
@@ -31,13 +35,46 @@ function Gisement() {
         </div>
         <div className={styles.content}>
           <div>Autres</div>
-          <div style={{ textAlign: 'center' }}>--</div>
+          <div style={{ textAlign: 'center' }}>
+            {Gisement.Autres ? Gisement.Autres : '--'}
+          </div>
         </div>
       </div>
-      <div className={styles.progress}>
-        <CircularProgress />
+      <Progress type={type} />
+      <div className={styles.grid}>
+        <div
+          className={styles.bioGaz}
+          onClick={() => {
+            setType('Biogaz');
+          }}
+        >
+          Biogaz
+        </div>
+        <div
+          className={styles.Obligation}
+          onClick={() => {
+            setType('Obligation');
+          }}
+        >
+          Obligations
+        </div>
+        <div
+          className={styles.Electricité}
+          onClick={() => {
+            setType('Electricité');
+          }}
+        >
+          Electricité
+        </div>
+        <div
+          className={styles.Actions}
+          onClick={() => {
+            setType('Actions');
+          }}
+        >
+          Actions
+        </div>
       </div>
-      <div className={styles.grid}></div>
     </div>
   );
 }
