@@ -21,11 +21,6 @@
   cursor: pointer;
 }
 
-span {
-  font-size: 1rem;
-}
-
-
 .in,
 .out:focus,
 .in,
