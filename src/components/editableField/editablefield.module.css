@@ -13,7 +13,7 @@
   font-weight: 300;
   margin-right: .5rem;
   margin-bottom: .5rem;
-  padding: .6rem 1rem;
+  padding: .4rem 1rem;
   border: 1px solid #777;
   border-radius: 5px;
 }
@@ -34,5 +34,7 @@ span {
 .in,
 .out:active {
   border: .12rem solid rgb(32, 151, 111);
+  background-color: hsla(171, 36%, 85%, 0.377);
+
   ;
 }

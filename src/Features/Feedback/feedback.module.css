@@ -29,3 +29,36 @@
   border-radius: 5px;
   background-color: #e0dede;
 }
+
+
+.tooltip {
+  width: 280px;
+  padding: .8% 1.5%;
+  border: 1.5px solid #c2babad3;
+  background-color: #f0f0f0ef;
+  border-radius: 8px;
+  position: absolute;
+  transform: translate(3rem, -50%);
+  z-index: 10;
+}
+
+.tooltip p {
+  width: 100%;
+  padding: 2px 6px;
+  font-size: .8rem;
+  border-radius: 20px;
+  background-color: #c2babad3;
+}
+
+.tooltip h5 {
+  font-weight: 500;
+  margin-bottom: .15rem;
+}
+
+.row1 {
+  margin-bottom: .7rem;
+}
+
+.row2 {
+  margin-bottom: .2rem;
+}
