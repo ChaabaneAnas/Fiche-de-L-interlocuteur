@@ -7,7 +7,7 @@ function StarRating() {
     setValue(newValue);
   }
   return (
-    <Stack spacing={10}>
+    <Stack spacing={2}>
       <Rating value={value} onChange={handleChange} precision={0.5} max={3} />
     </Stack>
   );

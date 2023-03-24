@@ -2,6 +2,7 @@ import styles from './body.module.css';
 import EditableField from '../../components/editableField/EditableField';
 import { useState } from 'react';
 import { data } from '../../data';
+import Gisement from '../Gisement/Gisement';
 
 function Body() {
   const [adress, setAdress] = useState(data[0].adress);
@@ -48,6 +49,10 @@ function Body() {
             <EditableField initValue={contactAssoc.contact} />
           </div>
         </div>
+      </div>
+      <div className={`${styles.row} ${styles.row1}`}>
+        <h5 className={styles.title}>Gisement</h5>
+        <Gisement />
       </div>
     </div>
   );
