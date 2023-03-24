@@ -13,19 +13,19 @@ function Progress({ type }: propTypes) {
 
   switch (type) {
     case 'Biogaz':
-      color = 'green';
+      color = '#06a94d';
       percent = graph.bioGaz;
       break;
     case 'Obligation':
-      color = 'blue';
+      color = '#1aa7ec';
       percent = graph.Obligations;
       break;
     case 'Electricité':
-      color = 'yellow';
+      color = '#e5de00';
       percent = graph.Electrcité;
       break;
     case 'Actions':
-      color = 'orange';
+      color = '#d4af37';
       percent = graph.Actions;
       break;
     default:

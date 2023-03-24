@@ -34,5 +34,7 @@ span {
 .in,
 .out:active {
   border: .12rem solid rgb(32, 151, 111);
+  background-color: hsla(171, 36%, 85%, 0.377);
+
   ;
 }

@@ -1,10 +1,14 @@
 import styles from './gisement.module.css';
 import { SiHappycow } from 'react-icons/si';
 import { GiGrain } from 'react-icons/gi';
-import { BiRecycle } from 'react-icons/bi';
+import { BiRecycle, BiDroplet } from 'react-icons/bi';
+import { useState } from 'react';
+import { BsLightningCharge } from 'react-icons/bs';
+import { BsOctagonHalf } from 'react-icons/bs';
+import { TbSignature } from 'react-icons/tb';
+
 import { data } from '../../data';
 import Progress from '../../components/Progress/progress';
-import { useState } from 'react';
 
 function Gisement() {
   const { Gisement } = data[0];
@@ -43,36 +47,53 @@ function Gisement() {
       <Progress type={type} />
       <div className={styles.grid}>
         <div
-          className={styles.bioGaz}
+          className={
+            type === 'Biogaz'
+              ? `${styles.BioGaz} ${styles.active}`
+              : styles.BioGaz
+          }
           onClick={() => {
             setType('Biogaz');
           }}
         >
+          <BiDroplet className={styles.icon} />
           Biogaz
         </div>
         <div
-          className={styles.Obligation}
+          className={
+            type === 'Obligation'
+              ? `${styles.Obligation} ${styles.active}`
+              : styles.Obligation
+          }
           onClick={() => {
             setType('Obligation');
           }}
         >
-          Obligations
+          <TbSignature className={styles.icon} /> Obligations
         </div>
         <div
-          className={styles.Electricité}
+          className={
+            type === 'Electricité'
+              ? `${styles.Electricité} ${styles.active}`
+              : styles.Electricité
+          }
           onClick={() => {
             setType('Electricité');
           }}
         >
-          Electricité
+          <BsLightningCharge className={styles.icon} /> Electricité
         </div>
         <div
-          className={styles.Actions}
+          className={
+            type === 'Actions'
+              ? `${styles.Actions} ${styles.active}`
+              : styles.Actions
+          }
           onClick={() => {
             setType('Actions');
           }}
         >
-          Actions
+          <BsOctagonHalf className={styles.icon} /> Actions
         </div>
       </div>
     </div>
