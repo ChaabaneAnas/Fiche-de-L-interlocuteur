@@ -1,6 +1,8 @@
 import Tooltip from '../../components/tooltip/Tooltip';
 import StarRating from '../../components/starRating';
+import { Rating } from '@mui/material';
 import styles from './feedback.module.css';
+import { useState } from 'react';
 
 const Objection = (): JSX.Element => {
   return (
@@ -18,10 +20,21 @@ const Objection = (): JSX.Element => {
 };
 
 function FeedBack(): JSX.Element {
+  const [value, setValue] = useState<null | number>(null);
+  function handleChange(e: React.ChangeEvent<{}>, newValue: number | null) {
+    setValue(newValue);
+  }
   return (
     <div className={styles.container}>
       <p className='interet'>Intérét</p>
-      <StarRating />
+      <Rating
+        value={value}
+        onChange={handleChange}
+        precision={0.5}
+        max={3}
+        size='large'
+      />
+
       <div className={styles.objection}>
         Objection{' '}
         <Tooltip Component={<Objection />}>
