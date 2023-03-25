@@ -31,7 +31,7 @@ the app is built to be scalable and Feature proof and ready to be integrated int
 
 ## Preview 
 
-![image](https://user-images.githubusercontent.com/99597333/227730062-eaaafe55-a00c-4adf-8c3a-1879b318a301.png)
+![image](https://user-images.githubusercontent.com/99597333/227730323-ee8af186-c72e-4c66-a6f9-81dd2305a37b.png)
 
 
 ## 🛠 Built With <a name="built-with"></a>
