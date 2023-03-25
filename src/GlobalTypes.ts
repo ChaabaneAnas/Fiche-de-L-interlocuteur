@@ -1,4 +1,4 @@
-interface contact {
+export interface contact {
   email: string;
   bureau: string;
   mobile: string;
@@ -10,21 +10,21 @@ interface status {
   R: number;
 }
 
-interface adress {
+export interface adress {
   region: string;
   département: string;
   Commune: string;
   Postal: string;
 }
 
-interface exploitation {
+export interface exploitation {
   qualification: string;
   génération: string;
   présentation: string;
   suivi: string;
 }
 
-interface CUMA {
+export interface CUMA {
   coopération: string;
   UMA: string;
 }
@@ -46,7 +46,17 @@ interface Gisement {
   };
 }
 
+export interface stateInterface {
+  persons: person[];
+}
+
+export interface actionInterface {
+  type: string;
+  payload: { index: number; load: unknown };
+}
+
 export interface person {
+  index: number;
   Nom: string;
   Prenom: string;
   Qualité: string;

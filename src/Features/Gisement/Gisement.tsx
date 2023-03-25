@@ -2,16 +2,15 @@ import styles from './gisement.module.css';
 import { SiHappycow } from 'react-icons/si';
 import { GiGrain } from 'react-icons/gi';
 import { BiRecycle, BiDroplet } from 'react-icons/bi';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { BsLightningCharge } from 'react-icons/bs';
 import { BsOctagonHalf } from 'react-icons/bs';
 import { TbSignature } from 'react-icons/tb';
-
-import { data } from '../../data';
 import Progress from '../../components/Progress/progress';
+import { Context } from '../../context/context';
 
 function Gisement() {
-  const { Gisement } = data[0];
+  const { Gisement } = useContext(Context)?.persons[0]!;
   const [type, setType] = useState<string | null>('Biogaz');
   return (
     <div className={styles.container}>

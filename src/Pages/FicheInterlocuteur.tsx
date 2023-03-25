@@ -1,16 +1,19 @@
 import Body from '../Features/body/body';
 import FeedBack from '../Features/Feedback/FeedBack';
 import ProspectCard from '../Features/Prospect/ProspectCard';
-import { data } from '../data';
-
 import styles from './fiche.module.css';
+import { actionInterface } from '../GlobalTypes';
 
-function FicheInterlocuteur() {
+interface propTypes {
+  dispatch: React.Dispatch<actionInterface>;
+}
+
+function FicheInterlocuteur({ dispatch }: propTypes): JSX.Element {
   return (
     <div className={styles.container}>
-      <ProspectCard person={data[0]} />
+      <ProspectCard />
       <FeedBack />
-      <Body />
+      <Body dispatch={dispatch} />
     </div>
   );
 }
