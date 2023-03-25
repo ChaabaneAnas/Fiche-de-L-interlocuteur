@@ -57,43 +57,35 @@ After you're finished please remove all the comments and instructions!
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [your_project_name] <a name="about-project"></a>
+# 📖 [Fiche-de-L-interlocuteur] <a name="about-project"></a>
 
-> Describe your project in 1 or 2 sentences.
-
-**[Rails blog_app]** is a...
+**[Fiche-de-L-interlocuteur]** is a take-home assignment from a local company, it is a Custom Component based SPA and has serval features such as DoubleClick to edit and conditional graph rendering,
+the app is built to be scalable and Feature proof and ready to be integrated into a real word project
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
-> A Blog app will be a classic example of a blog website. User will be able create a fully functional website that will show the list of posts and empower readers to interact with them by adding comments and liking posts.
-
-
 <details>
   <summary>Client</summary>
   <ul>
-    <li><a href="https://rubyonrails.org/">Ruby on Rails</a></li>
+    <li><a href="https://react.dev/">ReactJs</a></li>
   </ul>
 </details>
 
 <details>
   <summary>Server</summary>
   <ul>
-    <li><a href="https://rubyonrails.org/">Ruby on Rails</a></li>
+    <li><a href=#>No Server Yet </a></li>
   </ul>
 </details>
 
 <details>
 <summary>Database</summary>
   <ul>
-    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
+    <li><a href=#>No Dtatabase Yet </a></li>
   </ul>
 </details>
-
-
-
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -101,9 +93,7 @@ After you're finished please remove all the comments and instructions!
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> coming soon.
-
-- [Live Demo Link](https://yourdeployedapplicationlink.com)
+- [Live Demo Link](https://enr-agri.netlify.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -117,22 +107,21 @@ After you're finished please remove all the comments and instructions!
 
 In order to run this project you need:
 
-rails instaled on your machine :
+Node.js instaled on your machine :
 
 ```sh
- gem install rails
+ Head to node js website [Here](https://nodejs.org/en)
 ```
+
 and any kind of code editors(VScode for example ) :
 
 ```sh
-sudo i code 
+sudo i code
 ```
-
 
 ### Setup
 
 Clone this repository to your desired folder:
-
 
 Example commands:
 
@@ -141,63 +130,38 @@ Example commands:
   git clone git@github.com:myaccount/my-project.git
 ```
 
-
 ### Install
 
-Install all the gems in the Gemfile:
-
+Install all Dependencies:
 
 ```sh
   cd my-project
-  bundle install 
+  npm install
 ```
+
 --->
 
 ### Usage
 
 To run the project, execute the following command:
 
-
 ```sh
-  rails server
+  npm run dev
 ```
-
-
-### Run tests
-
-To run tests, run the following command:
-
-
-
-```sh
-  rspec ./spec/system
-```
-
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- AUTHORS -->
 
 ## 👥 Authors <a name="Anas Chaabane"></a>
 
 > Mention all of the collaborators of this project.
 
-👤 **Author1**
+👤 **Anas Chaabane**
 
-- GitHub: [@githubhandle](https://github.com/ChaabaneAnas/)
-- Twitter: [@twitterhandle](https://twitter.com/chaabaneanas)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/AnasChabaane)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@ChaabaneAnas](https://github.com/ChaabaneAnas/)
+- Twitter: [@chaabaneanas](https://twitter.com/chaabaneanas)
+- LinkedIn: [@AnasChabaane](https://linkedin.com/in/AnasChabaane)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -207,7 +171,7 @@ To run tests, run the following command:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/ChaabaneAnas/blog_app/issues).
+Feel free to check the [issues page](https://github.com/ChaabaneAnas/Fiche-de-L-interlocuteur/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -225,15 +189,12 @@ If you like this project...
 
 ## 🙏 Acknowledgments <a name="Microverse"></a>
 
-> Give credit to everyone who inspired your codebase.
 
 I would like to thank Microverse for making all of this possible
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 ## 📝 License <a name="license"></a>
 
