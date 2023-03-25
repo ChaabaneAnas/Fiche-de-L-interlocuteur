@@ -29,6 +29,11 @@
 **[Fiche-de-L-interlocuteur]** is a take-home assignment from a local company, it is a Custom Component based SPA and has serval features such as DoubleClick to edit and conditional graph rendering,
 the app is built to be scalable and Feature proof and ready to be integrated into a real word project
 
+## Preview 
+
+![image](https://user-images.githubusercontent.com/99597333/227730062-eaaafe55-a00c-4adf-8c3a-1879b318a301.png)
+
+
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
