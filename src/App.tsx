@@ -1,16 +1,16 @@
+import { useReducer } from 'react';
 import './App.css';
-import { useState } from 'react';
+import { Context } from './context/context';
 import FicheInterlocuteur from './Pages/FicheInterlocuteur';
+import { initialState, reduerFn } from './reducers/Reducer';
 
 function App() {
-  const [value, setValue] = useState('Hello');
-  function handleSave(value: string): void {
-    setValue(value);
-  }
-
+  const [state, dispatch] = useReducer(reduerFn, initialState);
   return (
     <div className='App'>
-      <FicheInterlocuteur />
+      <Context.Provider value={state}>
+        <FicheInterlocuteur dispatch={dispatch} />
+      </Context.Provider>
     </div>
   );
 }

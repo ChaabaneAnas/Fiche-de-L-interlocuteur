@@ -1,4 +1,5 @@
-import { person } from '../../GlobalTypes';
+import { useContext } from 'react';
+import { Context } from '../../context/context';
 import styles from './prospectCard.module.css';
 import { FaUserCircle } from 'react-icons/fa';
 import { CiMail } from 'react-icons/ci';
@@ -6,13 +7,12 @@ import { BsTelephoneInbound } from 'react-icons/bs';
 import { MdOutlineFax } from 'react-icons/md';
 import Sline from '../../components/sLine/Sline';
 
-interface propTypes {
-  person: person;
-}
+export default function ProspectCard(): JSX.Element {
+  const state = useContext(Context);
+  const Person = state!.persons[0];
 
-export default function ProspectCard({ person }: propTypes): JSX.Element {
   let color;
-  switch (person.Qualité) {
+  switch (Person.Qualité) {
     case 'Prospect':
       color = 'orange';
       break;
@@ -32,12 +32,12 @@ export default function ProspectCard({ person }: propTypes): JSX.Element {
           <FaUserCircle className={styles.avatar} />
         </div>
         <div className={styles.infos}>
-          <h2>{`${person.Nom} ${person.Prenom}`}</h2>
+          <h2>{`${Person.Nom} ${Person.Prenom}`}</h2>
           <p>
-            Qualité: <span style={{ color: color }}>{person.Qualité}</span>
+            Qualité: <span style={{ color: color }}>{Person.Qualité}</span>
           </p>
-          <p>Référence dossier: {person.référence}</p>
-          <p>id compte: {person.id}</p>
+          <p>Référence dossier: {Person.référence}</p>
+          <p>id compte: {Person.id}</p>
         </div>
       </div>
       <Sline height='3rem' width='.1rem' color='green' position='center' />
@@ -46,19 +46,19 @@ export default function ProspectCard({ person }: propTypes): JSX.Element {
         <div className={styles.statusItems}>
           <div className={`${styles.stat} ${styles.ro}`}>
             <div className={styles.item}>RO</div>
-            <span>{person.status.RO}</span>
+            <span>{Person.status.RO}</span>
           </div>
           <div className={`${styles.stat} ${styles.oc}`}>
             <div className={styles.item}>OC</div>
-            <span>{person.status.OC}</span>
+            <span>{Person.status.OC}</span>
           </div>
           <div className={`${styles.stat} ${styles.st}`}>
             <div className={styles.item}>ST</div>
-            <span> {person.status.ST} </span>
+            <span> {Person.status.ST} </span>
           </div>
           <div className={`${styles.stat} ${styles.r}`}>
             <div className={styles.item}>R+</div>
-            <span> {person.status.R} </span>
+            <span> {Person.status.R} </span>
           </div>
         </div>
       </div>
@@ -66,17 +66,17 @@ export default function ProspectCard({ person }: propTypes): JSX.Element {
       <div className={styles.contact}>
         <p className='centerY'>
           {' '}
-          <CiMail className={styles.contactIcons} /> {person.contact.email}{' '}
+          <CiMail className={styles.contactIcons} /> {Person.contact.email}{' '}
         </p>
         <p className='centerY'>
           {' '}
           <MdOutlineFax className={styles.contactIcons} />{' '}
-          {person.contact.bureau}{' '}
+          {Person.contact.bureau}{' '}
         </p>
         <p className='centerY'>
           {' '}
           <BsTelephoneInbound className={styles.contactIcons} />{' '}
-          {person.contact.mobile}{' '}
+          {Person.contact.mobile}{' '}
         </p>
       </div>
     </div>

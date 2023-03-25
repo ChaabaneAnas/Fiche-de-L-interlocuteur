@@ -1,14 +1,26 @@
 import styles from './body.module.css';
 import EditableField from '../../components/editableField/EditableField';
-import { useState } from 'react';
-import { data } from '../../data';
+import { useContext, useState } from 'react';
 import Gisement from '../Gisement/Gisement';
+import { actionInterface } from '../../GlobalTypes';
+import { Context } from '../../context/context';
 
-function Body() {
-  const [adress, setAdress] = useState(data[0].adress);
-  const [exploi, setExploi] = useState(data[0].exploitation);
-  const [cuma, setCuma] = useState(data[0].CUMA);
-  const [contactAssoc, setcontactAssoc] = useState(data[0].contactAssociés);
+interface propTypes {
+  dispatch: React.Dispatch<actionInterface>;
+}
+
+function Body({ dispatch }: propTypes) {
+  const {
+    adress: Adress,
+    exploitation,
+    CUMA,
+    contactAssociés,
+  } = useContext(Context)!.persons[0];
+
+  const [adress, setAdress] = useState(Adress);
+  const [exploi, setExploi] = useState(exploitation);
+  const [cuma, setCuma] = useState(CUMA);
+  const [contactAssoc, setcontactAssoc] = useState(contactAssociés);
 
   return (
     <div className={styles.container}>

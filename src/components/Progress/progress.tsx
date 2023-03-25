@@ -1,16 +1,16 @@
 import styles from './progress.module.css';
 import { Circle } from 'rc-progress';
-import { data } from '../../data';
-
-const { graph } = data[0].Gisement;
+import { useContext } from 'react';
+import { Context } from '../../context/context';
 
 interface propTypes {
   type: string | null;
 }
 
 function Progress({ type }: propTypes) {
-  let color: string, percent: number;
+  const { graph } = useContext(Context)?.persons[0].Gisement!;
 
+  let color: string, percent: number;
   switch (type) {
     case 'Biogaz':
       color = '#06a94d';

@@ -2,7 +2,6 @@ import Tooltip from '../../components/tooltip/Tooltip';
 import { Rating } from '@mui/material';
 import styles from './feedback.module.css';
 import { useState } from 'react';
-import { width } from '@mui/system';
 
 const Objection = (): JSX.Element => {
   return (
@@ -28,7 +27,6 @@ function FeedBack(): JSX.Element {
     <div className={styles.container}>
       <p className='interet'>Intérét</p>
       <Rating value={value} onChange={handleChange} precision={0.5} max={3} />
-
       <div className={styles.objection}>
         Objection{' '}
         <Tooltip Component={<Objection />}>
