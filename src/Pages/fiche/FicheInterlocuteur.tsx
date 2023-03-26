@@ -1,8 +1,8 @@
-import Body from '../Features/body/body';
-import FeedBack from '../Features/Feedback/FeedBack';
-import ProspectCard from '../Features/Prospect/ProspectCard';
+import Body from '../../Features/body/body';
+import FeedBack from '../../Features/Feedback/FeedBack';
+import ProspectCard from '../../Features/Prospect/ProspectCard';
 import styles from './fiche.module.css';
-import { actionInterface } from '../GlobalTypes';
+import { actionInterface } from '../../GlobalTypes';
 
 interface propTypes {
   dispatch: React.Dispatch<actionInterface>;
