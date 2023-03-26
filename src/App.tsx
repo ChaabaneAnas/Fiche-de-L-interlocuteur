@@ -1,7 +1,8 @@
 import { useReducer } from 'react';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import { Context } from './context/context';
-import FicheInterlocuteur from './Pages/FicheInterlocuteur';
+import FicheInterlocuteur from './Pages/fiche/FicheInterlocuteur';
 import { initialState, reduerFn } from './reducers/Reducer';
 
 function App() {
@@ -9,7 +10,17 @@ function App() {
   return (
     <div className='App'>
       <Context.Provider value={state}>
-        <FicheInterlocuteur dispatch={dispatch} />
+        <Routes>
+          <Route
+            path='/about'
+            element={<FicheInterlocuteur dispatch={dispatch} />}
+          />{' '}
+          <Route path='/fiche' element={<FicheInterlocuteur />} />
+          <Route
+            path='/'
+            element={<FicheInterlocuteur dispatch={dispatch} />}
+          />
+        </Routes>
       </Context.Provider>
     </div>
   );
