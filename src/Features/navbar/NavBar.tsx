@@ -4,11 +4,17 @@ import { NavLink } from 'react-router-dom';
 
 const NavBar: FC = () => {
   return (
-    <nav>
-      <ul>
-        <NavLink to='/'>Home</NavLink>
-        <NavLink to='/fiche'>Fich</NavLink>
-        <NavLink to='/about'>About</NavLink>
+    <nav className={styles.container}>
+      <ul className={styles.navlist}>
+        <NavLink className={styles.navitem} to='/'>
+          Home
+        </NavLink>
+        <NavLink className={styles.navitem} to='/fiche'>
+          Fich
+        </NavLink>
+        <NavLink className={styles.navitem} to='/about'>
+          About
+        </NavLink>
       </ul>
     </nav>
   );

@@ -16,3 +16,7 @@ body {
   align-items: center;
   gap: 0.3rem;
 }
+
+.App {
+  padding: 10px;
+}
