@@ -14,12 +14,12 @@ function App() {
     <div className='App'>
       <Context.Provider value={state}>
         <Routes>
-          <Route path='/about' element={<About />} />
+          <Route path='/about' element={<FicheInterlocuteur dispatch={dispatch}} />
           <Route
             path='/fiche'
             element={<FicheInterlocuteur dispatch={dispatch} />}
           />
-          <Route path='/' element={<Home />} />
+          <Route path='/' element={<FicheInterlocuteur dispatch={dispatch} />} />
         </Routes>
       </Context.Provider>
     </div>
