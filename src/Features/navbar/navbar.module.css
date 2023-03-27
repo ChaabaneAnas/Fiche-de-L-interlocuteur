@@ -1,0 +1,13 @@
+.navList {
+  display: flex;
+  width: 100%
+}
+
+.navitem {
+  flex:1;
+  background-color: var(--primary);
+}
+
+.active {
+  opacity: .8;
+}

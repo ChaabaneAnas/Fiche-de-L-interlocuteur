@@ -4,6 +4,7 @@ import { useContext, useState } from 'react';
 import Gisement from '../Gisement/Gisement';
 import { actionInterface } from '../../GlobalTypes';
 import { Context } from '../../context/context';
+import FeedBack from '../Feedback/FeedBack';
 
 interface propTypes {
   dispatch: React.Dispatch<actionInterface>;
@@ -24,6 +25,7 @@ function Body({ dispatch }: propTypes) {
 
   return (
     <div className={styles.container}>
+      <FeedBack />
       <div className={`${styles.row} ${styles.row1}`}>
         <h5 className={styles.title}>Adress personnelle</h5>
         <div className={styles.content}>

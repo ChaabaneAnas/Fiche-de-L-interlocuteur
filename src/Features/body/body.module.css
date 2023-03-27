@@ -1,5 +1,12 @@
 .container {
+  padding: .8rem;
   padding-left: 22px;
+  width: 100%;
+  max-width: 920px;
+  border-radius: 12px;
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.75);
 }
 
 .content {

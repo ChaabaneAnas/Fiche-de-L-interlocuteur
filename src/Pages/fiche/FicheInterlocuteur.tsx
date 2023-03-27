@@ -12,7 +12,6 @@ function FicheInterlocuteur({ dispatch }: propTypes): JSX.Element {
   return (
     <div className={styles.container}>
       <ProspectCard />
-      <FeedBack />
       <Body dispatch={dispatch} />
     </div>
   );
